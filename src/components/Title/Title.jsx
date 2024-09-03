@@ -1,0 +1,7 @@
+const MyTitle = ({ text }) => {
+    return (
+        <h1>{text}</h1>
+    );
+}
+
+export default MyTitle;
