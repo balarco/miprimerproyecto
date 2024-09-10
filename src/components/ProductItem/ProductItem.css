@@ -1,0 +1,46 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: #525252;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product h2 {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+.product h3 {
+    margin: 0.3rem 0;
+    text-align: left;
+}
+
+
+.product p {
+    font-size: 0.875rem;
+    margin: -0.2rem 0;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px
+}

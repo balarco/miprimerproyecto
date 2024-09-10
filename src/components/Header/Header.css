@@ -2,11 +2,39 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 100%;
     background-color: #1a1a1a;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem 2rem;
+    margin-bottom: 1.2rem;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 75px;
+    max-height: 75px;
+    margin-right: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
 }
 
 nav {
@@ -16,7 +44,44 @@ nav {
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul.open {
+        display: flex;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
 }

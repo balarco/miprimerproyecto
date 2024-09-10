@@ -1,4 +1,6 @@
-const MainContent = ({ children }) => {
+import { useState } from 'react';
+
+const NavBar = ({ children }) => {
     return (
         <main>
             {children}

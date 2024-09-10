@@ -1,5 +1,4 @@
-import MyImage from '../Image/Image.jsx';
-import './Product.css';
+import './ProductItem.css';
 
 const truncateDescription = (description, limit) => {
     if (description.length > limit) {
@@ -9,16 +8,15 @@ const truncateDescription = (description, limit) => {
     return description;
 };
 
-const Product = ({ imgurl, imgalt, title, description }) => {
-    const truncatedDescription = truncateDescription(description, 50); // Adjust character limit
-
+const ProductItem = ({ imgurl, imgalt, title, description, price }) => {
     return (
         <div className="product">
-            <MyImage imgurl={imgurl} imgalt={imgalt} />
+            <img src={imgurl} alt={imgalt} style={{ width: '100%', height: 'auto' }} />
             <h2>{title}</h2>
-            <p>{truncatedDescription}</p>
+            <p>{truncateDescription(description, 50)}</p>
+            <h3>${price}</h3>
         </div>
     );
-}
+};
 
-export default Product;
+export default ProductItem;

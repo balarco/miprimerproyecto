@@ -3,8 +3,26 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+            <div className="footer-container">
+                <div className="footer-column">
+                    <h3>Contáctenos</h3>
+                    <div className="footer-item"><a href="/help">Ayuda & Contacto</a></div>
+                    <div className="footer-item"><a href="/retorno-devoluciones">Retornos & Devoluciones</a></div>
+                    <div className="footer-item"><a href="/shipping">Información de Envio</a></div>
+                </div>
+                <div className="footer-column">
+                    <h3>Acerca de Nosotros</h3>
+                    <div className="footer-item"><a href="/acerca-de">Nuestra Historia</a></div>
+                    <div className="footer-item"><a href="/nuestros-artesanos">Nuestros Artesanos</a></div>
+                    <div className="footer-item"><a href="/aviso-legal">Términos y Condiciones para Venta</a></div>
+                </div>
+                <div className="footer-column">
+                    <h3>Síguenos</h3>
+                    <div className="footer-item"><a href="/facebook">Facebook</a></div>
+                    <div className="footer-item"><a href="/twitter">Twitter</a></div>
+                    <div className="footer-item"><a href="/instagram">Instagram</a></div>
+                </div>
+            </div>
         </footer>
     );
 }
