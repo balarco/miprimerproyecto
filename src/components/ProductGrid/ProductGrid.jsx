@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { StaggeredGrid, StaggeredGridItem } from 'react-staggered-grid';
 import ProductItem from '../ProductItem/ProductItem.jsx';
 import './ProductGrid.css';
-import products from '../Products/products.js';
+import getProducts from '../Products/Products.jsx';
+import Loading from '../Loading/Loading.jsx';
 
 const ProductGrid = () => {
     useEffect(() => {
@@ -19,7 +20,7 @@ const ProductGrid = () => {
             fitHorizontalGap={true}
             fitVerticalGap={true}
         >
-            {products.map((product, index) => (
+            {getProducts.map((product, index) => (
                 <StaggeredGridItem index={index} key={index}>
                 <ProductItem
                     imgurl={product.imgurl}

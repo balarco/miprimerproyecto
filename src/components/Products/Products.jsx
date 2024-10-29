@@ -1,5 +1,8 @@
+import { useState, useEffect } from 'react';
 const products = [
     {
+        id: 1,
+        category: 'Vasijas',
         imgurl: 'https://images.unsplash.com/photo-1677076454531-8b5f786f748c',
         imgalt: 'Producto 1',
         title: 'Producto 1',
@@ -8,6 +11,8 @@ const products = [
         stock: 10,
     },
     {
+        id: 2,
+        category: 'Pintura',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Product 2',
         title: 'Product 2',
@@ -16,6 +21,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 3,
+        category: 'Telares',
         imgurl: 'https://images.unsplash.com/photo-1587925420577-527a56780bfd',
         imgalt: 'Product 3',
         title: 'Product 3',
@@ -24,6 +31,8 @@ const products = [
         stock: 30,
     },
     {
+        id: 4,
+        category: 'Vasijas',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Producto 4',
         title: 'Producto 4',
@@ -32,6 +41,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 5,
+        category: 'Pintura',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Producto 5',
         title: 'Producto 5',
@@ -40,6 +51,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 6,
+        category: 'Telares',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Product 6',
         title: 'Product 6',
@@ -48,6 +61,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 7,
+        category: 'Vasijas',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Product 7',
         title: 'Product 7',
@@ -56,6 +71,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 8,
+        category: 'Pintura',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Product 8',
         title: 'Product 8',
@@ -64,6 +81,8 @@ const products = [
         stock: 20,
     },
     {
+        id: 9,
+        category: 'Telares',
         imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
         imgalt: 'Product 9',
         title: 'Product 9',
