@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ProductItem.css';
 
 const truncateDescription = (description, limit) => {
@@ -8,15 +9,13 @@ const truncateDescription = (description, limit) => {
     return description;
 };
 
-const ProductItem = ({ imgurl, imgalt, title, description, price }) => {
+export default function ProductItem({ id, img, alt, title, description, price }) {
     return (
         <div className="product">
-            <img src={imgurl} alt={imgalt} style={{ width: '100%', height: 'auto' }} />
-            <h2>{title}</h2>
-            <p>{truncateDescription(description, 50)}</p>
+            <Link to={`/products/${id}`}><img src={img} alt={alt} style={{ width: '100%', height: 'auto' }} /></Link>
+            <Link to={`/products/${id}`}><h2>{title}</h2></Link>
+            <Link to={`/products/${id}`}><p>{truncateDescription(description, 50)}</p></Link>
             <h3>${price}</h3>
         </div>
     );
-};
-
-export default ProductItem;
+}

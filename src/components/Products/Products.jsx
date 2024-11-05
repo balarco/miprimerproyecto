@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-const products = [
+export const products = [
     {
         id: 1,
         category: 'Vasijas',
-        imgurl: 'https://images.unsplash.com/photo-1677076454531-8b5f786f748c',
-        imgalt: 'Producto 1',
+        img: 'https://images.unsplash.com/photo-1677076454531-8b5f786f748c',
+        alt: 'Producto 1',
         title: 'Producto 1',
         description: 'Desc.',
         price: 10,
@@ -13,8 +12,8 @@ const products = [
     {
         id: 2,
         category: 'Pintura',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Product 2',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Product 2',
         title: 'Product 2',
         description: 'Desc.',
         price: 20,
@@ -23,8 +22,8 @@ const products = [
     {
         id: 3,
         category: 'Telares',
-        imgurl: 'https://images.unsplash.com/photo-1587925420577-527a56780bfd',
-        imgalt: 'Product 3',
+        img: 'https://images.unsplash.com/photo-1587925420577-527a56780bfd',
+        alt: 'Product 3',
         title: 'Product 3',
         description: 'Desc.',
         price: 30,
@@ -33,8 +32,8 @@ const products = [
     {
         id: 4,
         category: 'Vasijas',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Producto 4',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Producto 4',
         title: 'Producto 4',
         description: 'Desc.',
         price: 20,
@@ -43,8 +42,8 @@ const products = [
     {
         id: 5,
         category: 'Pintura',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Producto 5',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Producto 5',
         title: 'Producto 5',
         description: 'Desc.',
         price: 20,
@@ -53,8 +52,8 @@ const products = [
     {
         id: 6,
         category: 'Telares',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Product 6',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Product 6',
         title: 'Product 6',
         description: 'Desc.',
         price: 20,
@@ -63,8 +62,8 @@ const products = [
     {
         id: 7,
         category: 'Vasijas',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Product 7',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Product 7',
         title: 'Product 7',
         description: 'Desc.',
         price: 20,
@@ -73,8 +72,8 @@ const products = [
     {
         id: 8,
         category: 'Pintura',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Product 8',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Product 8',
         title: 'Product 8',
         description: 'Desc.',
         price: 20,
@@ -83,13 +82,38 @@ const products = [
     {
         id: 9,
         category: 'Telares',
-        imgurl: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
-        imgalt: 'Product 9',
+        img: 'https://plus.unsplash.com/premium_photo-1669802516069-d2ab1e70b644',
+        alt: 'Product 9',
         title: 'Product 9',
         description: 'Desc.',
         price: 20,
         stock: 20,
+        types: ['Vasijas', 'Pintura', 'Telares'],
     },
 ];
 
-export default products;
+export const getProducts = () => {
+    return new Promise((res) => {
+        setTimeout(() => {
+            res(products);
+        }, 2500);
+    });
+};
+
+export const getProductById = (id) => {
+    return new Promise((res) => {
+        const productoFiltrado = products.find((product) => product.id === parseInt(id));
+        setTimeout(() => {
+            res(productoFiltrado);
+        }, 2000);
+    });
+};
+
+export const getProductByCategory = (category) => {
+    return new Promise((res) => {
+        const productosFiltrados = products.filter((product) => product.category === category);
+        setTimeout(() => {
+            res(productosFiltrados);
+        }, 2000);
+    });
+};
